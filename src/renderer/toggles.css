@@ -1,0 +1,18 @@
+.toggle-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: calc(100% - 20px);
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+.toggle-heading:hover { color: #b5c0d3; }
+.toggle-arrow { font-size: 15px; line-height: 8px; }
+.group-empty { margin: 7px 10px; color: #657187; font-size: 11px; }
+.settings-divider { border: 0; border-top: 1px solid #293550; margin: 28px 0; }
+.settings-card h3 { margin: 0; font-size: 18px; }
+.secondary-button { min-height: 39px; border: 1px solid #53627e; border-radius: 7px; background: transparent; color: #dce2ed; padding: 0 16px; cursor: pointer; font: 700 12px 'Plus Jakarta Sans', sans-serif; }
+.secondary-button:hover { border-color: #f2c94c; color: #f2c94c; }
+.secondary-button:disabled { opacity: .6; cursor: wait; }

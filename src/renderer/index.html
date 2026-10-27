@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CineList</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="toggles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand"><span class="brand-mark">C</span><span>CineList</span></div>
+      <button class="nav-item active" data-view="discover"><span>⌕</span> Descobrir</button>
+      <p class="nav-label">MINHAS LISTAS</p>
+      <div id="list-nav"></div>
+      <div class="sidebar-bottom">
+        <button class="nav-item" data-view="settings"><span>⚙</span> Configurações</button>
+        <p class="attribution">Este produto usa a API do TMDB, mas não é endossado ou certificado pelo TMDB.</p>
+      </div>
+    </aside>
+    <main>
+      <header><div><p class="eyebrow" id="view-kicker">CATÁLOGO PESSOAL</p><h1 id="view-title">Descobrir</h1></div><div id="token-status" class="status-pill"></div></header>
+      <section id="discover-view" class="view">
+        <div class="hero"><div><p class="eyebrow">ENCONTRE SEU PRÓXIMO FAVORITO</p><h2>Seu cinema,<br><em>sua ordem.</em></h2><p>Pesquise filmes e séries em português ou no título original. Cada item entra automaticamente nas listas por década e gênero.</p></div><div class="hero-orbit"><span>★</span><span>♬</span><span>✦</span></div></div>
+        <form id="search-form" class="search-bar"><input id="search-input" required placeholder="Ex.: Cidade de Deus, Spirited Away, The Bear…" autocomplete="off" /><select id="kind-select"><option value="movie">Filmes</option><option value="tv">Séries</option></select><button>Buscar</button></form>
+        <div id="search-message" class="feedback"></div><div id="search-results" class="result-grid"></div>
+      </section>
+      <section id="list-view" class="view hidden"><div class="list-toolbar"><p id="list-description">Arraste para definir sua ordem pessoal.</p><span id="item-count" class="count"></span></div><div id="rank-list" class="rank-list"></div></section>
+      <section id="settings-view" class="view hidden"><div class="settings-card"><p class="eyebrow">CONEXÃO</p><h2>Token do TMDB</h2><p>Use o <strong>API Read Access Token</strong> da sua conta TMDB. Ele fica armazenado somente neste computador.</p><form id="token-form"><input id="token-input" type="password" placeholder="Cole seu token de leitura" autocomplete="off" /><button>Salvar token</button></form><p class="help">Crie ou consulte sua chave em <a href="https://www.themoviedb.org/settings/api">TMDB › API</a>.</p><hr class="settings-divider" /><p class="eyebrow">DADOS JÁ SALVOS</p><h3>Atualizar países</h3><p>Consulta o TMDB pelo ID de cada título antigo que ainda não tem país, sem uma nova busca por nome.</p><button id="sync-countries-button" class="secondary-button">Atualizar países dos títulos existentes</button><div id="token-message" class="feedback"></div></div></section>
+    </main>
+  </div>
+  <template id="result-template"><article class="result-card"><img class="poster" alt="" /><div class="result-info"><span class="media-label"></span><h3></h3><p class="original-title"></p><p class="summary"></p><div class="card-footer"><span class="year"></span><button class="add-button">Adicionar</button></div></div></article></template>
+  <script src="app.js"></script>
+</body>
+</html>

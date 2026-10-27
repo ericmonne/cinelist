@@ -1,0 +1,13 @@
+{
+  "name": "cinelist",
+  "version": "1.0.0",
+  "description": "Rankings pessoais de filmes e séries com dados do TMDB.",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "node --test test/**/*.test.js"
+  },
+  "devDependencies": {
+    "electron": "^39.2.7"
+  }
+}
